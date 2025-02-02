@@ -1,9 +1,4 @@
-import { version } from "../version.js";
-import {
-	AnyAudioContext,
-	hasAudioContext,
-	theWindow,
-} from "./context/AudioContext.js";
+import { AnyAudioContext, hasAudioContext } from "./context/AudioContext.js";
 import { Context } from "./context/Context.js";
 import { DummyContext } from "./context/DummyContext.js";
 import { BaseContext } from "./context/BaseContext.js";
@@ -73,17 +68,4 @@ export function setContext(
  */
 export function start(): Promise<void> {
 	return globalContext.resume();
-}
-
-/**
- * Log Tone.js + version in the console.
- */
-if (theWindow && !theWindow.TONE_SILENCE_LOGGING) {
-	let prefix = "v";
-	if (version === "dev") {
-		prefix = "";
-	}
-	const printString = ` * Tone.js ${prefix}${version} * `;
-	// eslint-disable-next-line no-console
-	console.log(`%c${printString}`, "background: #000; color: #fff");
 }
