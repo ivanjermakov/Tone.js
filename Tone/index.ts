@@ -34,31 +34,10 @@ export function immediate(): Seconds {
  * The Transport object belonging to the global Tone.js Context.
  * @see {@link TransportClass}
  * @category Core
- * @deprecated Use {@link getTransport} instead
- */
-export const Transport = getContext().transport;
-
-/**
- * The Transport object belonging to the global Tone.js Context.
- * @see {@link TransportClass}
- * @category Core
  */
 export function getTransport(): TransportClass {
 	return getContext().transport;
 }
-
-/**
- * The Destination (output) belonging to the global Tone.js Context.
- * @see {@link DestinationClass}
- * @category Core
- * @deprecated Use {@link getDestination} instead
- */
-export const Destination = getContext().destination;
-
-/**
- * @deprecated Use {@link getDestination} instead
- */
-export const Master = getContext().destination;
 
 /**
  * The Destination (output) belonging to the global Tone.js Context.
@@ -72,25 +51,10 @@ export function getDestination(): DestinationClass {
 /**
  * The {@link ListenerClass} belonging to the global Tone.js Context.
  * @category Core
- * @deprecated Use {@link getListener} instead
- */
-export const Listener = getContext().listener;
-
-/**
- * The {@link ListenerClass} belonging to the global Tone.js Context.
- * @category Core
  */
 export function getListener(): ListenerClass {
 	return getContext().listener;
 }
-
-/**
- * Draw is used to synchronize the draw frame with the Transport's callbacks.
- * @see {@link DrawClass}
- * @category Core
- * @deprecated Use {@link getDraw} instead
- */
-export const Draw = getContext().draw;
 
 /**
  * Get the singleton attached to the global context.
@@ -101,13 +65,6 @@ export const Draw = getContext().draw;
 export function getDraw(): DrawClass {
 	return getContext().draw;
 }
-
-/**
- * A reference to the global context
- * @see {@link Context}
- * @deprecated Use {@link getContext} instead
- */
-export const context = getContext();
 
 /**
  * Promise which resolves when all of the loading promises are resolved.
